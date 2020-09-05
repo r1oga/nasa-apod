@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA API Pictures</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.google.com/s2/favicons?domain=nasa.gov/"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="loader hidden">
+      <img src="rocket.svg" alt="Rocket Loading Anmimation" />
+    </div>
+    <div class="container">
+      <div class="navigation-container">
+        <span class="background"></span>
+        <span class="r1oga">
+          Made by
+          <a href="https://r1oga.now.sh/" target="_blank">@r1oga</a> |
+          <a target="_blank" href="https://github.com/r1oga/nasa-apod">
+            <i class="fab fa-github"></i>
+          </a>
+        </span>
+        <span class="navigation-items" id="resultsNav">
+          <h3 class="clickable" onclick="updateDOM('favorites')">Favorites</h3>
+          <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+          <h3 class="clickable" onclick="updateDOM()">Load new</h3>
+        </span>
+        <span class="navigation-items hidden" id="favoritesNav">
+          <h3 class="clickable" onclick="updateDOM()">Load new</h3>
+        </span>
+      </div>
+      <div class="images-container"></div>
+    </div>
+    <div class="save-confirmed" hidden>
+      <h1>ADDED!</h1>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
